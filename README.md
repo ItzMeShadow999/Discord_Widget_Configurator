@@ -2,6 +2,27 @@
 
 This UserScript injects an ambient, dark-themed layout configuration matrix directly into the native Discord Developer Portal UI. It allows developers to configure, export, import, and hot-reload advanced profile widget structures with single-click simplicity.
 
+![System Tutorial](Tutorial.gif)
+
+---
+
+##  How to Use
+
+1. **Open the Panel:** Navigate to the [Discord Developer Portal](https://discord.com/developers/applications). Click the **Widget Panel** button positioned next to the native "New Application" button.
+2. **Load Your Apps:** Click **Query App Registry** to populate the dropdown menu with your existing Discord applications.
+3. **Apply a Template:** Paste your target layout JSON scheme directly into the *Data Blueprint Object Repository* workspace buffer.
+4. **Deploy:** Choose your target application from the dropdown and click **Import Structure** 
+
+---
+
+##  Compatibility & Built-On Source
+
+This project is built directly on the foundation of **[Discord-Widgets-Extension v1.6.2](https://github.com/TheCreativeGod/Discord-Widgets-Extension/releases/tag/v1.6.2)**. 
+
+Because it maintains absolute structural alignment with the original layout schema models, this version is fully compatible with and capable of running all JSON configurations and layout templates built for the original extension.
+
+ **Need Help?** If you run into any setup failures or structural system issues, feel free to DM **[Shadow](https://discord.com/users/1065604516399026176)** directly on Discord.
+
 ---
 
 ##  Key Features
@@ -10,7 +31,7 @@ This UserScript injects an ambient, dark-themed layout configuration matrix dire
 * **Ambient Design System:** Implements a custom dark-mode workspace utilizing Discord's core `gg sans` typography and smooth, custom scrollbar animations.
 * **Data Blueprint Object Repository:** A fully functional sandbox area to manipulate, modify, copy, and serialize target widget JSON schematics.
 * **Hot-Reload Architecture:** Clear and instantly swap state layout configuration arrays dynamically without cycling page states.
-* **Unified Asset compilation Management:** Automatically parses unique layout image items into memory buffers and packs them cleanly into deployment packages.
+* **Unified Asset Compilation Management:** Automatically parses unique layout image items into memory buffers and packs them cleanly into deployment packages.
 * **Elevated Terminal Shell Fallback:** Generates a real-time PowerShell pipeline command script to bypass authorization roadblocks or security integration sync boundaries instantly.
 * **Feature Flag Injection:** Forced client configuration experiment flags onto memory registries to keep hidden tabs visible after continuous memory refreshes.
 
