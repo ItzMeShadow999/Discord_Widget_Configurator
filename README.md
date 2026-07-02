@@ -6,7 +6,7 @@ This UserScript injects an ambient, dark-themed layout configuration matrix dire
 
 ---
 
-##  How to Use
+##   How to Use
 
 1. **Open the Panel:** Navigate to the [Discord Developer Portal](https://discord.com/developers/applications). Click the **Widget Panel** button positioned next to the native "New Application" button.
 2. **Load Your Apps:** Click **Query App Registry** to populate the dropdown menu with your existing Discord applications.
@@ -15,7 +15,7 @@ This UserScript injects an ambient, dark-themed layout configuration matrix dire
 
 ---
 
-##  Compatibility & Built-On Source
+##   Compatibility & Built-On Source
 
 This project is built directly on the foundation of **[Discord-Widgets-Extension v1.6.2](https://github.com/TheCreativeGod/Discord-Widgets-Extension/releases/tag/v1.6.2)**. 
 
@@ -25,7 +25,7 @@ Because it maintains absolute structural alignment with the original layout sche
 
 ---
 
-##  Key Features
+##   Key Features
 
 * **Native Interface Overlay:** Adds a dedicated **Widget Panel** button directly alongside the native *New Application* button inside the dashboard interface.
 * **Ambient Design System:** Implements a custom dark-mode workspace utilizing Discord's core `gg sans` typography and smooth, custom scrollbar animations.
@@ -37,7 +37,7 @@ Because it maintains absolute structural alignment with the original layout sche
 
 ---
 
-##  Dashboard Functions Documented
+##   Dashboard Functions Documented
 
 | Feature Trigger | System Action Behavior |
 | :--- | :--- |
@@ -50,10 +50,13 @@ Because it maintains absolute structural alignment with the original layout sche
 
 ---
 
-##  Installation
+##   Installation
 
-1. Ensure you have a userscript manager installed in your browser (such as **Tampermonkey** / **Violentmonkey** / **ScriptVault**).
-2. Create a new script, copy the complete contents of `Discord_Widget_Configurator-UserScript.js`, and save it.
+1. Ensure you have a userscript manager installed in your browser:
+   * **Recommended ScriptVault for Chrome:** [Chrome Extension](https://chromewebstore.google.com/detail/scriptvault/jlhdbkeijcbgnonpfkfkkkhfmbeejkgh?hl=en)
+   * **Recommended Violentmonkey for Firefox:** [Firefox Add-on](https://addons.mozilla.org/en-US/firefox/addon/violentmonkey/)
+   * Alternatively, other managers like **Tampermonkey** or **User Scripts Manager** / **Magic Userscript+** / **User Script Loader** will also work.
+2. Create a new script, copy the complete contents of `Discord_Widget_Configurator-UserScript.js`, and save it. (you can also donwloaded it dicrtly from Greasyfork: https://greasyfork.org/en/scripts/585129-discord-widget-configurator-portal-edition)
 3. Navigate to your [Discord Developer Portal](https://discord.com/developers/applications) to interact with the new interface options.
 
 ---
