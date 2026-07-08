@@ -56,7 +56,7 @@ Because it maintains absolute structural alignment with the original layout sche
    * **Recommended ScriptVault for Chrome:** [Chrome Extension](https://chromewebstore.google.com/detail/scriptvault/jlhdbkeijcbgnonpfkfkkkhfmbeejkgh?hl=en)
    * **Recommended Violentmonkey for Firefox:** [Firefox Add-on](https://addons.mozilla.org/en-US/firefox/addon/violentmonkey/)
    * Alternatively, other managers like **Tampermonkey** or **User Scripts Manager** / **Magic Userscript+** / **User Script Loader** will also work.
-2. Create a new script, copy the complete contents of `Discord_Widget_Configurator-UserScript.js`, and save it. (you can also donwloaded it dicrtly from Greasyfork: https://greasyfork.org/en/scripts/585129-discord-widget-configurator-portal-edition)
+2. Create a new script, copy the complete contents of `Discord_Widget_Configurator-UserScript.js`, and save it. (you can also donwload it dicrtly from Greasyfork: https://greasyfork.org/en/scripts/585129-discord-widget-configurator-portal-edition)
 3. Navigate to your [Discord Developer Portal](https://discord.com/developers/applications) to interact with the new interface options.
 
 ---
