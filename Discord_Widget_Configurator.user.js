@@ -7,6 +7,7 @@
 // @match        https://discord.com/developers/*
 // @grant        GM_xmlhttpRequest
 // @connect      discord.com
+// @license         MIT
 // @run-at       document-start
 // ==/UserScript==
 
