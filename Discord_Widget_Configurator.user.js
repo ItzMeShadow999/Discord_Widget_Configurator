@@ -5,6 +5,7 @@
 // @description  One-click Discord profile widget configurator built natively into the Developer Portal UI with accurate ambient dark gradients and adjusted layout constraints.
 // @author       Shadow
 // @match        https://discord.com/developers/*
+// @icon         https://i.pinimg.com/736x/9c/fb/a9/9cfba9b4cc1d06fbe0f00263cbc926de.jpg
 // @grant        GM_xmlhttpRequest
 // @connect      discord.com
 // @license         MIT
