@@ -542,7 +542,7 @@
         const id = "dwc-" + Math.random().toString(36).slice(2);
         const timer = setTimeout(() => {
           window.removeEventListener("message", onMsg);
-          resolve({ ok: false, status: 0, body: "Userscript interface synchronization timeout[cite: 4]." });
+          resolve({ ok: false, status: 0, body: "Userscript interface synchronization timeout ." });
         }, 20000);
         function onMsg(e) {
           if (e.source !== window) return;
